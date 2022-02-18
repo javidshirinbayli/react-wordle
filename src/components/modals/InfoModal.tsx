@@ -8,65 +8,54 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="Kā spēlēt" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Guess the word in 6 tries. After each guess, the color of the tiles will
-        change to show how close your guess was to the word.
+      Uzmini vārdu 6 mēģinājumos. Pēc katra minējuma kvadrātu krāsa mainīsies, lai parādītu, cik tuvu tavs minējums bija vārdam.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="W"
+          value="B"
           status="correct"
         />
-        <Cell value="E" />
-        <Cell value="A" />
         <Cell value="R" />
-        <Cell value="Y" />
+        <Cell value="O" />
+        <Cell value="Š" />
+        <Cell value="A" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter W is in the word and in the correct spot.
+        Burts B atrodas vārdā un pareizajā vietā.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="P" />
-        <Cell value="I" />
+        <Cell value="K" />
+        <Cell value="A" />
         <Cell
           isRevealing={true}
           isCompleted={true}
-          value="L"
+          value="M"
           status="present"
         />
-        <Cell value="O" />
-        <Cell value="T" />
+        <Cell value="Ē" />
+        <Cell value="R" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter L is in the word but in the wrong spot.
+        Burts M ir vārdā, bet nepareizā vietā.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="V" />
-        <Cell value="A" />
+        <Cell value="U" />
         <Cell value="G" />
-        <Cell isRevealing={true} isCompleted={true} value="U" status="absent" />
-        <Cell value="E" />
+        <Cell value="U" />
+        <Cell isRevealing={true} isCompleted={true} value="N" status="absent" />
+        <Cell value="S" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter U is not in the word in any spot.
+        Burts N neatrodas nevienā vietā vārdā.
       </p>
-
-      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
-        This is an open source version of the word guessing game we all know and
-        love -{' '}
-        <a
-          href="https://github.com/cwackerfuss/react-wordle"
-          className="underline font-bold"
-        >
-          check out the code here
-        </a>{' '}
-      </p>
+      
     </BaseModal>
   )
 }

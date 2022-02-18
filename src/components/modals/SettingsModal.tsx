@@ -26,17 +26,17 @@ export const SettingsModal = ({
     <BaseModal title="Settings" isOpen={isOpen} handleClose={handleClose}>
       <div className="grid-cols-2 gap-4">
         <SettingsToggle
-          settingName="Hard Mode"
+          settingName="Grūts režīms"
           flag={isHardMode}
           handleFlag={handleHardMode}
         />
         <SettingsToggle
-          settingName="Dark Mode"
+          settingName="Tumšais režīms"
           flag={isDarkMode}
           handleFlag={handleDarkMode}
         />
         <SettingsToggle
-          settingName="High Contrast Mode"
+          settingName="Augsta kontrasta režīms"
           flag={isHighContrastMode}
           handleFlag={handleHighContrastMode}
         />
